@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!--
+            ReviewInitProvider fires before Application.onCreate() so the
+            JsbBridgeWrapper listener is ready before the first JS frame.
+        -->
+        <provider
+            android:name="com.cocos.inappreview.ReviewInitProvider"
+            android:authorities="${applicationId}.reviewinit"
+            android:exported="false"/>
+    </application>
+
+</manifest>
